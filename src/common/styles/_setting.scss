@@ -1,0 +1,97 @@
+//== 설정
+.setting {
+  padding-top: 15px;
+  h6 {
+    padding-bottom: 5px;
+    color: $gray-darker;
+    @include font-size(11px, normal)
+  }
+  .script-box {
+    padding-bottom: 10px;
+    text-align: left;
+    @include font-size(11px, normal);
+  }
+  .lock {
+    padding-bottom: 15px;
+  }
+
+  .pannel.small {
+    padding: 10px;
+    text-align: left;
+    font-size: 0;
+    .script {
+      display: inline-block;
+      width: calc(100% - 70px);
+      height: auto;
+      color: $title-color;
+      vertical-align: middle;
+    }
+    .btn {
+      width: 70px;
+      margin: 0;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+  }
+
+  .password {
+    padding-bottom: 15px;
+
+    .error {
+      height: 22px;
+    }
+    .block-input {
+      display: inline-block;
+      margin-right: 5px;
+      width: calc(100% - 75px);
+      height: 30px;
+      vertical-align: top;
+    }
+  }
+
+  .language {
+    padding-bottom: 15px;
+  }
+
+  .backup {
+    margin-bottom: 15px;
+    .script {
+      display: inline-block;
+      margin-right: 5px;
+      width: calc(100% - 75px);
+      height: auto;
+      @include font-size(11px, 130%);
+      color: $font-color;
+      white-space: normal;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .btn {
+      width: 70px;
+      margin: 0;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+  }
+
+  .reset {
+    .pannel.small {
+      .script {
+        height: auto;
+        @include font-size(11px, 130%);
+        color: $font-color;
+      }
+    }
+  }
+
+  .modal-lang {
+    text-align: center;
+    .radio-group label {
+      margin: 0 30px;
+    }
+    .btn.small {
+      width: 130px;
+    }
+  }
+}

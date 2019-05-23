@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <circle cx="6.5" cy="6.5" r="6.5" fill="#E5E5E5" fill-rule="nonzero" stroke="#D9D9D9"/>
+        <text fill="#230F3B" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="9">
+            <tspan x="4.941" y="10">?</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,89 @@
+//== 접속이력
+.history {
+  padding-top: 15px;
+  h6 {
+    padding:0 0 5px 15px;
+    text-align: left;
+    color: #333;
+    @include font-size(11px, normal);
+  }
+  .not-mainnet {
+    padding: 15px;
+    color: $title-color;
+    font-weight: bold;
+  }
+  &-list__box {
+    position: relative;
+    height: 390px;
+    .not-mainnet {
+      @include font-size(14px, normal);
+      font-weight: normal;
+      color: $font-color;
+      .history-list__go {
+        padding-top: 15px;
+        .btn {
+          border-radius: 2px;
+          padding: 8px 16px;
+          @include font-size(12px, 100%);
+        }
+      }
+    }
+  }
+  .tbl {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    thead {
+      th {
+        padding: 8px 0 10px;
+        @include font-size(11px, normal);
+        font-weight: normal;
+        &.time {
+          width: 70px;
+        }
+        &.type {
+          width: 60px;
+        }
+        &.info {
+          width: 185px;
+        }
+      }
+    }
+    tbody {
+      tr:nth-child(2n-1) {
+        background-color: $pale;
+      }
+      th, td {
+        height: 62px;
+        padding: 10px 0;
+        @include font-size(10px, normal);
+      }
+      th {
+        font-weight: 400;
+      }
+      .time { width: 70px; color: $title-color}
+      .active {
+        width: 60px;
+        &-type {
+          color: $title-color;
+          font-weight: 700;
+        }
+      }
+      .info {
+        text-align: left;
+        padding-left: 10px;
+        @include ellipsis();
+        &-user,
+        &-eos {
+          color: $title-color;
+          font-weight: 700;
+        }
+        &-user,
+        &-memo {
+          width: 151px;
+          @include ellipsis();
+        }
+      }
+    }
+  }
+}

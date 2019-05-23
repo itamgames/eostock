@@ -1,0 +1,6 @@
+// Typography
+
+@mixin font-size($size, $line-height ) {
+  font-size: $size;
+  line-height: $line-height;
+}

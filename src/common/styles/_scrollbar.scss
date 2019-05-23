@@ -1,0 +1,20 @@
+//== scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-left: 4px solid #fff;
+  background-color: $gray-back;
+  outline: 1px solid #4a4a4a;
+}
+
+
+div:scroll {
+  border-right: 4px solid #fff;
+}

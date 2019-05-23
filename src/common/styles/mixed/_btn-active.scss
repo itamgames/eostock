@@ -1,0 +1,15 @@
+@mixin btn-active($color, $over-color, $active-bg-color ) {
+  color: $color;
+
+  &.on,
+  &:focus,
+  &:hover,
+  &:active {
+    color: $over-color;
+  }
+
+  &:active {
+    color: $over-color;
+    background: $active-bg-color;
+  }
+}

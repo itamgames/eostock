@@ -1,0 +1,12 @@
+@mixin box-shadow( $x, $y, $deep, $color, $isClick ) {
+  box-shadow: $x $y $deep $color;
+
+  @if $isClick == true {
+    position: relative;
+    &:active {
+      left: $x;
+      top: $y;
+      box-shadow: none;
+    }
+  }
+}

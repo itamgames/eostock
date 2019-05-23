@@ -1,0 +1,11 @@
+// Typography color
+
+@mixin a-hover($color, $over-color ) {
+  color: $color;
+  &.on,
+  &:focus,
+  &:hover,
+  &:active {
+    color: $over-color;
+  }
+}

@@ -1,0 +1,236 @@
+//== transfer
+.transfer {
+  .send {
+    padding: 15px;
+    &-box {
+      display: flex;
+      width: 100%;
+      height: 94px;
+      border-radius: 6px;
+      background: #fff;
+      overflow: hidden;
+      &__sender {
+        box-sizing: border-box;
+        width: 141px;
+        padding: 15px;
+        .account-sender {
+          padding-top: 15px;
+          text-align: left;
+          color: $title-color;
+          @include ellipsis();
+        }
+      }
+      &__img {
+        img {
+          height: 94px;
+        }
+      }
+      &__recip {
+        box-sizing: border-box;
+        width: calc(100% - 141px - 18px);
+        padding: 15px;
+        padding-left: 10px;
+        background: $purple;
+        h6 {
+          padding-bottom: 3px;
+          color: #fff;
+        }
+        .account-recip {
+          box-sizing: border-box;
+          width: 100%;
+          height: 46px;
+          line-height: 36px;
+          padding: 0 10px;
+          border-radius: 2px;
+          text-align: left;
+          color: $title-color;
+          @include font-size(12px, normal);
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  .eos {
+    .pannel {
+      padding-top: 24px;
+    }
+    &-wallet {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 72%;
+      padding-right: 10px;
+      text-align: left;
+      color: $title-color;
+      h4 {
+        padding-bottom: 5px;
+      }
+      p {
+        display: block;
+        min-height: 34px;
+        @include font-size(18px, 14px);
+        font-weight: 700;
+        word-break: break-all;
+      }
+      vertical-align: middle;
+    }
+    &-active {
+      position: relative;
+      display: inline-block;
+      width: 28%;
+      padding-bottom: 15px;
+      text-align: right;
+      vertical-align: middle;
+      .token-select {
+        position: absolute;
+        left: 0; top:0;
+        width: 100%;
+        border-radius: 2px;
+        border-top:2px solid $yellow;
+        padding-bottom: 15px;
+        text-align: center;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0,0,0,.2);
+        h6 {
+          padding: 8px 0 25px;
+          color: $title-color;
+          @include font-size(11px, normal);
+        }
+
+        &__list {
+          width: 72px;
+          max-height: 160px;
+          border: 1px solid $gray;
+          margin: 0 auto;
+          overflow-y: auto;
+          li:nth-child(2n-1) {
+            background: $pale;
+          }
+          .btn {
+            width: 100%;
+            height: 33px;
+            color: $title-color;
+            @include font-size(12px, normal);
+            &.on {
+              color: #fff;
+              background: $purple;
+            }
+          }
+        }
+      }
+    }
+    .btn.js-change {
+      height: 34px;
+      @include font-size(11px, normal);
+      background: rgb(242, 190, 46);
+    }
+
+    .quantity {
+      padding: 10px;
+      border-radius: 6px;
+      text-align: left;
+      background: $purple;
+      h6 {
+        padding-bottom: 5px;
+        @include  font-size(11px, normal);
+        font-weight: normal;
+        color: #fff;
+      }
+      &-eos {
+        box-sizing: border-box;
+        padding: 13px 15px 12px;
+        border-radius: 2px;
+        background-color: #fff;
+        .token {
+          border: 0;
+          margin: 0;
+          padding: 0;
+          @include font-size(18px, 14px);
+          font-weight: 700;
+          color: $title-color;
+        }
+        .unit {
+          padding-top: 4px;
+          float: right;
+          @include font-size(12px, normal);
+        }
+      }
+    }
+  }
+
+  .memo {
+    padding-top: 20px;
+    text-align: left;
+    h6 {
+      padding-bottom: 5px;
+      @include font-size(11px, normal);
+    }
+    .textarea {
+      height: 75px;
+      min-height: 75px;
+      max-height: 75px;
+    }
+  }
+}
+
+//== modal
+.modal-transfer {
+  text-align: left;
+  h6 {
+    padding: 15px 0 4px;
+    @include font-size(11px, normal);
+    font-weight: normal;
+  }
+  p {
+    padding-bottom: 15px;
+    @include font-size(18px, 14px);
+    color: $title-color;
+    font-weight: 700;
+  }
+  .textarea {
+    height: 75px;
+    min-height: 75px;
+    max-height: 75px;
+  }
+  &__submit {
+    padding: 15px 40px 0;
+    .btn {
+      height: 30px;
+    }
+  }
+
+  .transaction-code {
+    border-radius: 2px;
+    border: 1px solid $gray;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    p {
+      word-break: break-all;
+      @include font-size(14px, normal);
+      font-weight: normal;
+    }
+  }
+
+  .btn.trans.underline {
+    color: $gray-dot;
+    vertical-align: middle;
+    @include a-hover($gray-dot, #000);
+    &:hover,
+    &:active {
+      border-bottom-color: #000;
+    }
+  }
+
+  .copy-msg {
+    float: left;
+    margin-left: -4px;
+    padding-top: 4px;
+    @include font-size(11px, 100%);
+    color: $font-color;
+  }
+
+  .en .copy-msg {
+    margin-left: -8px;
+    padding-top: 6px;
+  }
+}

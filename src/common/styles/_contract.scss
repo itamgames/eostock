@@ -1,0 +1,20 @@
+.contract {
+  &-data {
+    li {
+      display: block;
+
+      &:last-child {
+        border-bottom-width: 0;
+      }
+    }
+
+    label {
+      line-height: 110%;
+    }
+
+    .block-input {
+      margin: 5px 0;
+      height: 30px;
+    }
+  }
+}

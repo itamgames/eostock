@@ -1,0 +1,50 @@
+//== 계정추가
+
+.account {
+  padding-top: 15px;
+  &-body {
+    position: relative;
+    overflow: hidden;
+    &__box {
+      position: relative;
+      display: flex;
+      left: 0;
+      transition: left .2s ease;
+    }
+    .cell {
+      width: 345px;
+      height: 500px;
+      border-radius: 6px;
+      margin: 0 15px auto;
+      padding: 25px 15px;
+      background: #fff;
+      h5 {
+        width: 315px;
+      }
+    }
+    .private-ment {
+      padding: 5px 0 25px;
+      @include font-size(11px, normal);
+      &.privateScript {
+        padding: 0 0 15px;
+      }
+    }
+
+    .list-box {
+      height: 350px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .middle-box {
+      display: table-cell;
+      width: 315px;
+      height: 167px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+  }
+
+
+}

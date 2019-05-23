@@ -1,0 +1,77 @@
+//=== ram
+.ram {
+  &-eos {
+    padding: 15px 10px;
+  }
+
+  &-box {
+    padding: 15px 10px;
+    border-radius: 6px;
+    color: #fff;
+    background: $purple;
+    h4 {
+      text-align: left;
+      padding: 0 0 4px;
+    }
+    p {
+      box-sizing: border-box;
+      height: 50px;
+      padding-left: 15px;
+      line-height: 50px;
+      border-radius: 6px;
+      background: #fff;
+      color: $font-color;
+      text-align: left;
+      input {
+        width: calc(100% - 50px);
+        font-size: 18px;
+      }
+    }
+  }
+
+  .sell-box {
+    text-align: left;
+    p {
+      color: $title-color;
+    }
+  }
+
+  .purch-type {
+    text-align: left;
+    @include font-size(11px, normal);
+    &:after {
+      content: ' ';
+      display: inline-block;
+      clear: both;
+    }
+    .radio-group {
+      display: inline-block;
+      label {
+        color: #fff;
+      }
+    }
+
+    .ram-bytes {
+      float: right;
+      display: inline-block;
+      padding-left: 5px;
+      .btn {
+        width: 46px;
+        height: 20px;
+        margin-right: 2px;
+        font-size: 10px;
+        color: #fff;
+        opacity: .3;
+        background: $title-color;
+      }
+
+      &.on .btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-submit {
+    padding: 15px;
+  }
+}

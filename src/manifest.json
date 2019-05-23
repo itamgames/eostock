@@ -1,0 +1,43 @@
+{
+  "name": "EOStock",
+  "description" : "In-browser EOS Wallet",
+  "version": "1.3.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "EOStock",
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background":{
+    "scripts": ["background.js"]
+  }
+}

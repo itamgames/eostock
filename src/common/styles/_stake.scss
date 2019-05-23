@@ -1,0 +1,47 @@
+//== stake / unstake
+.stake {
+  &-eos {
+    padding: 15px 10px;
+  }
+  &-box {
+    padding: 15px 10px;
+    border-radius: 6px;
+    color: #fff;
+    background: $purple;
+    h4 {
+      text-align: left;
+      padding: 0 0 4px;
+    }
+    p {
+      box-sizing: border-box;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 6px;
+      background: #fff;
+      color: $font-color;
+      input {  width: calc(100% - 50px); }
+    }
+  }
+
+  &-submit {
+    padding: 15px;
+    .btn {
+      line-height: 90%;
+      line-height: 120%;
+    }
+    span {
+      font-weight: 400;
+      letter-spacing: 1px;
+      &.small {
+        font-size: 11px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .delegate-type {
+    font-size: 14px;
+    color: $purple;
+    text-align: center;
+  }
+}

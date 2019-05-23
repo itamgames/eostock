@@ -1,0 +1,79 @@
+.prompt {
+  box-sizing: border-box;
+  height: calc(100vh - 50px);
+  padding-bottom: 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  &-header {
+    padding: 20px 15px;
+
+    .col-1-2 {
+      vertical-align: bottom;
+    }
+    small {
+      line-height: 0;
+      font-size: 11px;
+      color: #230f3b;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: normal;
+      color: #230f3b;
+    }
+
+    span {
+      display: inline-block;
+      padding-top: 15px;
+    }
+  }
+
+  .pannel {
+    .title {
+      padding: 10px 0 15px;
+      span {
+        font-size: 11px;
+        font-weight: bold;
+        color: #999;
+      }
+      h3 {
+        padding-top: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #230f3b;
+      }
+    }
+
+    .infobox {
+      box-sizing: border-box;
+      padding: 20px 15px;
+      min-height: 66vw;
+      border: 1px solid #d9d9d9;
+      word-break:break-all;
+      span {
+        display: block;
+        padding-bottom: 4px;
+        color: #999;
+      }
+      p {
+        padding-bottom: 24px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #230f3b;
+      }
+    }
+  }
+
+  .btn-account {
+    padding: 0 15px;
+    .btn {
+      width: 49.5%;
+      float: left;
+
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+}

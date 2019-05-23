@@ -1,0 +1,135 @@
+//== main
+.home {
+  padding-top: 15px;
+  h6 {
+    padding-bottom: 5px;
+    @include font-size(11px, normal);
+    color: $gray-darker;
+  }
+  .my-eos {
+    h6 {
+      color: $title-color;
+    }
+    .eos {
+      &-coin {
+        height: 30px;
+        font-size: 0;
+        color: $title-color;
+        &__integer {
+          @include font-size(30px, 100%);
+          font-weight: 700;
+        }
+        &__decimal {
+          @include font-size(14px, normal);
+        }
+      }
+      &-dollar {
+        color: #bdb7c4;
+        @include font-size(11px, normal);
+        &__unit {
+          padding-right: 3px;
+        }
+      }
+    }
+
+    .eos-progress {
+      padding: 5px 0 9px;
+      &-data {
+        width: 100%;
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          color: $font-color;
+          @include font-size(10px, normal);
+          &.dot {
+            width: 4px;
+            height: 4px;
+            margin-right: 4px;
+            background-color: red;
+            &.staked {
+              background-color: #6035bd;
+            }
+            &.unstaked {
+              background-color: #f2be2e;
+            }
+            &.refund {
+              background-color: #b11e4b;
+            }
+          }
+        }
+
+        .eos-state {
+          color: $title-color;
+          @include font-size(12px, normal);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .tokens {
+    padding-top: 15px;
+    &-view {
+      position: relative;
+      min-height: 104px;
+      &.noToken {
+        border-radius: 6px;
+        border:1px dashed $gray-back;
+        font-weight: 300;
+        background: transparent;
+      }
+    }
+    .list-box {
+      height: 74px;
+      ul  {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        font-size: 0;
+      }
+      li {
+        width: 50%;
+        padding: 0;
+        font-size: 0;
+        vertical-align: middle;
+        &:nth-child(2n) {
+          border-left: 1px solid rgba(217, 217, 217, .3);
+        }
+        &:nth-child(4n),
+        &:nth-child(4n-1) {
+          background: #f6f2fa;
+        }
+        .title, .token {
+          display: inline-block;
+          padding: 8px 0 8px;
+          @include font-size(12px, normal);
+          font-weight: normal;
+          text-align: left;
+          color: $title-color;
+          vertical-align: top;
+        }
+        .title {
+          width: 42%;
+          padding-left: 8px;
+        }
+        .token {
+          width: 58%;
+          padding-right: 8px;
+          text-align: right;
+          font-weight: 700;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  .resource {
+    padding-top: 15px;
+    .bar {
+      h6 {
+        color: $gray-dot;
+      }
+    }
+
+  }
+}

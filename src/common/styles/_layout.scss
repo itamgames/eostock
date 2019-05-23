@@ -1,0 +1,326 @@
+html {
+  width: $body-width;
+}
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  color: #4d4d4d;
+  width: $body-width;
+  height: $body-height;
+  @include font-size(12px, 140%);
+  margin: auto;
+  font-weight: 400;
+  position: relative;
+  background-color: $body-color;
+}
+
+$routers-list-width: 190px;
+
+.wrap {
+  box-sizing: border-box;
+  position: relative;
+  width: 375px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid $gray;
+  border-top:0;
+  color: $font-color;
+  text-align: center;
+  background-color: $thame-background-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.header {
+  box-sizing: border-box;
+  position: relative;
+  left: 0; right: 0;
+  height: 52px;
+  padding: 0;
+  background-color: #fff;
+  z-index: $heder-zindex;
+  &:after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+  &-account {
+    width: 300px;
+    height: 52px;
+    float: left;
+    padding:11px 0 0 15px;
+    text-align: left;
+
+    &.on {
+      box-shadow: 4px 0 8px rgba(0,0,0,.2);
+    }
+
+    &__group {
+      color: $title-color;
+      @include font-size(10px, normal);
+    }
+    &__name {
+      .btn-account {
+        padding: 0;
+        margin: 0;
+        margin-top: -6px;
+        .accont {
+          max-width: 234px;
+          display: inline-block;
+          vertical-align: middle;
+          border-bottom: 1px solid #fff;
+          @include ellipsis();
+          @include font-size(14px, normal);
+        }
+        .icon-arrow-down  {
+          display: inline-block;
+          font-size: 10px;
+          vertical-align: middle;
+        }
+
+        @include a-hover($title-color, $title-color);
+        vertical-align: middle;
+
+        &:hover,
+        &:active {
+          .accont {
+            border-bottom-color: $font-color;
+          }
+          span {
+            padding: 0;
+          }
+        }
+      }
+
+      .btn-copy {
+        display: inline-block;
+        width: 30px;
+        height: 18px;
+        margin-top: -6px;
+        margin-left: 10px;
+        border-radius: 2px;
+        color: #fff;
+        @include font-size(9px, 100%);
+        background: $yellow;
+        vertical-align: middle;
+        span {
+          margin-top: -1px;
+          vertical-align: top;
+        }
+        &:hover,
+        &:active {
+          span {
+            padding: 0;
+          }
+        }
+        &:hover { background: $yellow-over; }
+      }
+    }
+  }
+
+  &-routers {
+    position: absolute;
+    right: 0; top:0;
+    width: 60px;
+    height: 52px;
+    padding-right: 10px;
+    line-height: 52px;
+    text-align: right;
+    .btn {
+      font-size: 10px;
+      color: $title-color;
+    }
+    &.on {
+      width: $routers-list-width;
+      box-shadow: -4px 0 8px rgba(0,0,0,.2);
+      background: #fff;
+    }
+  }
+
+  .js-home {
+    width: 20px;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .js-memu {
+    width: 20px;
+  }
+
+  .open-account,
+  .open-routers {
+    position: absolute;
+    top: 52px;
+    padding: 15px;
+    z-index: $heder-zindex + 1;
+    background: #fff;
+  }
+  .open-account {
+    left: 0;
+    width: 300px;
+    box-shadow: 4px 2px 8px rgba(0,0,0,.2);
+    &:after {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      left: 0; top:-4px;
+      width: 300px;
+      height: 10px;
+      background: #fff;
+    }
+
+    .list-box {
+      height: 314px;
+      margin-bottom: 15px;
+      .title {
+        display: block;
+        padding: 4px 15px;
+        border-bottom: 1px solid #fff;
+        text-align: left;
+        color: $title-color;
+        background-color: $gray-back;
+        @include font-size(11px, normal);
+        font-weight: 700;
+      }
+      .list-account {
+        height: 46px;
+        padding: 0;
+        cursor: default;
+        background: $gray-pale;
+        border-bottom: 1px solid #fff;
+        .js-account {
+          display: inline-block;
+          float: left;
+          width: calc(100% - 38px);
+          min-height: 46px;
+          padding: 0 0 0 15px;
+          text-align: left;
+          border: 0;
+          overflow: hidden;
+          background: transparent;
+          vertical-align: middle;
+        }
+        .btn-del {
+          float: right;
+          box-sizing: border-box;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          min-height: 24px;
+          margin: 10px 10px 0 0;
+          text-align: center;
+          padding: 4px 0 0 0;
+          border-radius: 2px;
+          color: $red;
+          @include font-size(14px, normal);
+          background: #fff;
+          .icon {
+            margin:0;
+          }
+          vertical-align: middle;
+        }
+        &:hover {
+          background: darken($gray-pale, 5%);
+        }
+        &.on {
+          color: #fff;
+          background: $purple;
+          &:hover .btn {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+
+    .js-add {
+      height: 32px;
+      width: 112px;
+      border-radius: 3px;
+      color: #fff;
+      background: $title-color;
+      &:hover { background: $over-bg; }
+    }
+
+  }
+  .open-routers {
+    right: 0;
+    width: $routers-list-width;
+    padding: 15px;
+    padding-top: 0;
+    z-index: $heder-zindex + 1;
+    background: #fff;
+    box-shadow: -4px 2px 8px rgba(0,0,0,.2);
+
+    &:after {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      left: 0; top:-4px;
+      width: 100%;
+      height: 10px;
+      background: #fff;
+      z-index: -1;
+    }
+    .menu-list {
+      position: relative;
+      margin-top: -6px;
+      li {
+        display: block;
+        padding: 8.5px 0;
+        .link {
+          display: block;
+          color: $title-color;
+          text-align: right;
+          font-weight: bold;
+          font-size: 18px;
+          span,
+          i {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          i {
+            margin-left: 10px;
+            font-size: 10px;
+          }
+        }
+      }
+
+    }
+    &-logo {
+      padding-top: 20px;
+      img {
+        width: 100px;
+      }
+    }
+  }
+
+  .mask {
+    position: fixed;
+    left: 0; top: 52px; right: 0; bottom:0;
+    background: rgba(0,0,0,.1);
+    z-index: $heder-zindex -1;
+  }
+}
+
+.footer {
+  position: absolute;
+  left: 0; right: 0; bottom: 15px;
+  img {
+    margin-bottom: 5px;
+  }
+  h6 {
+    @include font-size(9px, 100%);
+    text-align: center;
+    font-weight: normal;
+    color: $gray-dark;
+  }
+}
+
+.gap-h {
+  padding-top: 13px;
+  background: #fff;
+}

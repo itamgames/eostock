@@ -1,0 +1,105 @@
+//== 회원
+.sign {
+  &-head {
+    box-sizing: border-box;
+    height: 234px;
+    padding-top: 37px;
+    &__logo {
+      img {
+        width: 171px;
+        vertical-align: top;
+      }
+    }
+    h1 {
+      line-height: 100%;
+      padding-bottom: 14px;
+    }
+    p {
+      padding-top: 24px;
+      font-weight: 300;
+      &.en {
+        padding: 24px 48px 0;
+      }
+    }
+  }
+  &-body {
+    position: relative;
+    height: 321px;
+    overflow: hidden;
+    &__box {
+      position: relative;
+      display: flex;
+      left: 0;
+      transition: left .2s ease;
+    }
+    .cell {
+      width: 345px;
+      height: 321px;
+      border-radius: 6px;
+      margin:0 15px auto;
+      padding: 25px 15px;
+      background: #fff;
+      h5 {
+        width:315px;
+      }
+      .error {
+        height: 19px;
+      }
+    }
+
+    .hover-underline:hover span {
+      text-decoration: underline;
+    }
+
+    p {
+      padding: 15px 0 25px;
+      @include font-size(11px, normal);
+      font-weight: 300;
+      &.privateScript {
+        padding: 0 0 15px;
+      }
+    }
+    .private-ment {
+      padding: 0 0 15px;
+    }
+    &__submit {
+      width: 211px;
+      margin: 0 auto;
+    }
+
+    .list-box {
+      height: 164px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .middle-box {
+      display: table-cell;
+      width: 315px;
+      height: 167px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  &-foot {
+    position: relative;
+    .js-import {
+      position: absolute;
+      top: 4px;
+      right: 15px;
+      border-bottom: 1px solid $font-color;
+      @include btn-active($font-color, $title-color, transparent);
+      @include font-size(12px, normal);
+    }
+  }
+}
+
+.net-name {
+  height: 50px;
+  line-height: 50px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  color: #fff;
+  background: $purple;
+}

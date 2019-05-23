@@ -1,0 +1,44 @@
+//== backup
+.backup {
+  //=== import
+  &-import {
+    position: relative;
+    border-radius: 6px;
+    margin:0 15px auto;
+    margin-top: 20px;
+    padding: 25px 15px 20px;
+    background: #fff;
+    h5 {
+      padding-bottom: 20px;
+    }
+    .input-file  {
+      text-align: left;
+    }
+    .warning {
+      padding-bottom: 27px;
+      text-align: left;
+      @include font-size(11px, normal);
+      &.error {
+        color: $red;
+      }
+    }
+  }
+
+  //=== export
+  &.export {
+    padding-top: 20px;
+    .pannel {
+      padding: 25px 15px;
+    }
+    h3 {
+      padding-bottom: 20px;
+      color: $title-color;
+    }
+    .script {
+      padding-bottom: 45px;
+    }
+    .btn {
+      width: 211px;
+    }
+  }
+}
